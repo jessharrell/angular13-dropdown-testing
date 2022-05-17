@@ -1,0 +1,18 @@
+<form [formGroup]="group">
+  <div>
+    <label for="hero">Hero</label>
+    <select formControlName="Hero"
+            id="hero">
+      <option value="" selected></option>
+      <option [value]="hero" *ngFor="let hero of knownHeroes">{{hero}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="power">Power</label>
+    <select formControlName="Power"
+            id="power">
+      <option value="" selected></option>
+      <option [value]="power" *ngFor="let power of getPowers()">{{power}}</option>
+    </select>
+  </div>
+</form>
